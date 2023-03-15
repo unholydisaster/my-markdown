@@ -1,7 +1,7 @@
-import React from "react"
+/*import React from "react"
 import { useState } from "react";
 import fetch from 'isomorphic-fetch'
-import Cookies from "js-cookie";
+
 
 const Notes = () => {
     const [title, setTitle] = useState("");
@@ -56,3 +56,4 @@ const Notes = () => {
 };
 
 export default Notes
+*/

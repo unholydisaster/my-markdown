@@ -1,7 +1,6 @@
-
 import { UserNotes } from "@/backEnd/models/schema";
 import { UserModel } from "@/backEnd/models/users";
-import dbConnect from "../../../backEnd/utils/dbconnect";
+import dbConnect from "@/backEnd/utils/dbConnect";
 
 
 dbConnect();
