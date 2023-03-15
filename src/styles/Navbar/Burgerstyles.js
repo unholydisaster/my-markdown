@@ -1,0 +1,44 @@
+import styled from "styled-components"
+
+const breakpoints=[640,768,1024,1280]
+export const mq=breakpoints.map(
+    bp=>`@media screen and (max-width:${bp}px)`
+)
+
+
+export const Styledburger=styled.div`
+    ${mq[0,1]}{
+    width:1.4rem;
+    height:30px;
+    position:absolute;
+    top:15px;
+    left:5%;
+    display:flex;
+    justify-content:space-around;
+    flex-flow:column nowrap;  
+    z-index:40;
+    }`
+export const Bugers=styled.div`
+${mq[0,1]}{
+    width:1.3rem;
+    height:0.15rem;
+    border-radius:10px;
+    background-color:${({open})=>open ? 'white':'blue' };
+    font-size:16px;
+    transform-origin:1px;
+    transition:all 0.3s linear;
+    z-index:20;
+    
+    &:nth-child(1){
+        transform:${({open})=>open ? 'rotate(45deg)':'rotate(0)' };
+    }
+    
+    &:nth-child(2){
+        transform:${({open})=>open ? 'translateX(100%)':'translateX(0)'};
+        opacity:${({open})=>open ? 0 : 1};
+    }
+    &:nth-child(3){
+        transform:${({open})=>open ? 'rotate(-45deg)':'rotate(0)'};
+    }
+}
+`
