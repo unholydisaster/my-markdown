@@ -1,4 +1,4 @@
-import Notes from "@/components/Newnote"
+/*import Notes from "@/components/Newnote"
 
 const Notespage=()=>{
     return(
@@ -6,4 +6,4 @@ const Notespage=()=>{
     )
 }
 
-export default Notespage
+export default Notespage*/
