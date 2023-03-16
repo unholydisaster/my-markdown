@@ -1,5 +1,5 @@
 import React from "react"
-import Input, { AuthContainer, InputLabel, SubmitButton } from '@/styles/authStyles/auth';
+import Input, { AuthContainer,Content, InputLabel, StyledHr, SubmitButton } from '@/styles/authStyles/auth';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-fetch'
@@ -56,14 +56,17 @@ async function handleSubmit(event){
   <div>Passwords do not match</div>
   )}
   <AuthContainer>
+  <Content>
     <form onSubmit={handleSubmit}>
       <InputLabel> Sign up</InputLabel>
+      <StyledHr/>
       <Input label="Username" type="text" placeholder="Enter your Username" value={username} onChange={handleNameChange} />
       <Input label="Email" type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} />
       <Input label="Password" type="password" placeholder="password" value={password} onChange={handlePasswordChange} />
       <Input label="Confirm Password" type="password" placeholder="confirm password" value={confirmpassword} onChange={handleConfirmChange} />
       <SubmitButton type="submit">Register</SubmitButton>
     </form>
+    </Content>
     </AuthContainer>
   </>
   );

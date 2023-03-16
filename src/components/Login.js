@@ -1,5 +1,5 @@
 import React from "react"
-import Input, { AuthContainer, InputLabel, SubmitButton, SubmitLogin } from "@/styles/authStyles/auth";
+import Input, { AuthContainer, Content, InputLabel, StyledHr, SubmitButton, SubmitLogin } from "@/styles/authStyles/auth";
 import { useState } from "react";
 import { useRouter } from 'next/router';
 import {useCookies} from "react-cookie"
@@ -40,12 +40,15 @@ const Login = () => {
 
   return (
     <AuthContainer>
+      <Content>
       <form onSubmit={handleLogin}>
         <InputLabel>Login</InputLabel>
+        <StyledHr/>
         <Input label="Email" type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} />
         <Input label="Password" type="password" placeholder="password" value={password} onChange={handlePasswordChange} />
         <SubmitLogin type="submit">Login</SubmitLogin>
-      </form>
+      </form>        
+      </Content>
     </AuthContainer>
   );
 };

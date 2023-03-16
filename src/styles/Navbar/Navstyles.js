@@ -16,13 +16,11 @@ color:white;
 
 ${mq[0,1]}{
     left:0px;
-    background:blue;
-    position:absolute;
+    background:#0F1F37;
     top:0px;
-    width:100%;
-    height:50vh;
+    width:100vw;
+    height:100vh;
     color:white;
-    padding:20px;
     transform:${({open})=>open? 'translateX(0)':'translateX(-200%)'} ;
     transition-timing-function: ${({open})=>open?"ease-out" :"ease-in"} ;
     transition: 0.5s;
@@ -32,20 +30,7 @@ ${mq[0,1]}{
 }
 `
 
-export const Shadow=styled.div`
-${mq[0,1]}{
-    background:black;
-    position:absolute;
-    width:100%;
-    height:100vh;
-    transform:${({open})=>open? 'translateX(0)':'translateX(-400%)'} ;
-    transition-timing-function: ${({open})=>open?"ease-out" :"ease-in"} ;
-    transition: 0.1ms;
-    display:${({open})=>open? 'block':'none'} ;
-    opacity:40%;
-    z-index:20;  
-}
-`
+
 export const Links=styled.ul`{
 position:absolute;
 left:10%;
@@ -55,14 +40,14 @@ list-style-type:none;
 display:grid;
 grid-template-columns: repeat(5, 1fr);
 
-${mq[0,1]}{
+${mq[1]}{
 position:absolute;
 top:100px;
-left:60px;
+justify-content: center;
+align-items: center;
 list-style-type:none;
-margin:0;
-padding:0;
 z-index:30;
+width:100%;
 grid-template-columns:1fr;
 }
 }
@@ -74,8 +59,8 @@ font-size:18px;
 ${mq[0,1]}{
 font-family:Helvetica, verdana, sans-serif;
 font-size:22px;
-margin-bottom: 20px;
-font-weight:500;
+margin-bottom: 30px;
+font-weight:600;
 z-index:30;
 }
 }

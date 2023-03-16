@@ -22,7 +22,6 @@ const Layout=({children})=>{
       setCookies("access_token","")
       window.localStorage.removeItem("userID")
       router.push("/")
-      setOpen(!open)
       
     }
     const login=()=>{

@@ -1,31 +1,50 @@
 import styled from "styled-components";
 
-const breakpoints=[640,768,400,1024,1280]
+const breakpoints=[640,768,1024,1280]
 export const mq=breakpoints.map(
     bp=>`@media screen and (max-width:${bp}px)`
 )
 
+export const Lq=breakpoints.map(
+  bp=>`@media screen and (min-width:${bp}px)`
+)
+
 export const  AuthContainer=styled.div`{
-height:80%;
-position:relative;
-width:30vw;
-max-height:xxx;
-left: 35vw;
-top: 5vh;
-background-color:rgba(255, 255, 255, 0.3);
-border: 1px solid rgba(255, 255, 255, 0.2);
-box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.3);
-border-radius: 10px;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height:xxx;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.3);
+  border-radius: 10px;
+  
 
-
-${mq[0,1]}{
-position:relative;
-top:30vh;
-width:90vw; 
-left:20vw;
+${mq[1]}{
+  position:relative;
+  width:100vw; 
+  top:100px;
+  
+ 
 }
+
+${Lq[1]}{
+  position:relative;
+  width:30vw;
+  left:35vw;
+  top:50px;
+}
+
 }
 `
+
+export const Content = styled.div`
+  max-height:xxx;
+  width: 100%;
+
+
+
+`;
 
 export const InputField = styled.input`{
 position:relative;
@@ -45,8 +64,7 @@ line-height: 36px;
 display: flex;
 align-items: center;
 
-${mq[0,1,2]}{
-
+${mq[0,1]}{
 font-size: 20px;
 width:80%;
 height:40px;
@@ -99,6 +117,7 @@ export const SubmitButton=styled.button`{
     }
 }
 `
+
 export const SubmitLogin=styled.button`{
   position:relative;
   width:250px;
@@ -122,6 +141,13 @@ export const SubmitLogin=styled.button`{
     }
   }
   ` 
+
+export const StyledHr = styled.hr`
+  border: 1px solid #FFFFFF;
+  margin: 20px auto;
+  width: 80%;
+`;
+
 const Input = ({ label, type, placeholder, value, onChange }) => {
   return (
     <>
@@ -132,3 +158,6 @@ const Input = ({ label, type, placeholder, value, onChange }) => {
 };
 
 export default Input;
+
+
+//let's create a hr element that can be re-used using styled-components
