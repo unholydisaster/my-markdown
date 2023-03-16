@@ -40,8 +40,6 @@ export const Content = styled.div`
   max-height:xxx;
   width: 100%;
 
-
-
 `;
 
 export const InputField = styled.input`{

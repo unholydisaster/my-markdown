@@ -24,10 +24,9 @@ ${mq[1]}{
     top:0px;
     width:100vw;
     color:white;
-    transform:${({open})=>open? 'translateX(0)':'translateX(-200%)'} ;
+    transform:${({open})=>open? 'translateY(0)':'translateY(-100%)'} ;
     transition-timing-function: ${({open})=>open?"ease-out" :"ease-in"} ;
     transition: 0.5s;
-    opacity:85%;
     z-index:30; 
 }
 
