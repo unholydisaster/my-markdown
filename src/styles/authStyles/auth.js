@@ -20,7 +20,7 @@ border-radius: 10px;
 
 ${mq[0,1]}{
 position:relative;
-top:20%;
+top:30vh;
 width:95%; 
 left:10%;
 }
