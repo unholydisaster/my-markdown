@@ -6,7 +6,8 @@ export const GlobalStyle=createGlobalStyle`{
         margin:0px;
         padding:0px;
         font-family: Arial, san-serif;
-        background-color:white;
+        background-color:#0F1F37;
+        
     }
 }`
 

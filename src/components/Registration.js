@@ -1,5 +1,5 @@
 import React from "react"
-import Input, { AuthContainer, SubmitButton } from '@/styles/authStyles/auth';
+import Input, { AuthContainer, InputLabel, SubmitButton } from '@/styles/authStyles/auth';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import fetch from 'isomorphic-fetch'
@@ -57,6 +57,7 @@ async function handleSubmit(event){
   )}
   <AuthContainer>
     <form onSubmit={handleSubmit}>
+      <InputLabel> Sign up</InputLabel>
       <Input label="Username" type="text" placeholder="Enter your Username" value={username} onChange={handleNameChange} />
       <Input label="Email" type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} />
       <Input label="Password" type="password" placeholder="password" value={password} onChange={handlePasswordChange} />

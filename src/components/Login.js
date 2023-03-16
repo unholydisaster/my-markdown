@@ -1,5 +1,5 @@
 import React from "react"
-import Input, { AuthContainer, SubmitButton, SubmitLogin } from "@/styles/authStyles/auth";
+import Input, { AuthContainer, InputLabel, SubmitButton, SubmitLogin } from "@/styles/authStyles/auth";
 import { useState } from "react";
 import { useRouter } from 'next/router';
 import {useCookies} from "react-cookie"
@@ -41,6 +41,7 @@ const Login = () => {
   return (
     <AuthContainer>
       <form onSubmit={handleLogin}>
+        <InputLabel>Login</InputLabel>
         <Input label="Email" type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} />
         <Input label="Password" type="password" placeholder="password" value={password} onChange={handlePasswordChange} />
         <SubmitLogin type="submit">Login</SubmitLogin>

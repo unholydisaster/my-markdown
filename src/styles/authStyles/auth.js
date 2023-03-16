@@ -6,19 +6,22 @@ export const mq=breakpoints.map(
 )
 
 export const  AuthContainer=styled.div`{
-backgound-color:white;
 height:80%;
-position:absolute;
-left:30%;
-top:28%;
-width:40vw;
+position:relative;
+width:30vw;
+max-height:xxx;
+left: 35vw;
+top: 5vh;
+background-color:rgba(255, 255, 255, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.2);
+box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.3);
+border-radius: 10px;
 
 
 ${mq[0,1]}{
-position:absolute;
 top:20%;
-left:2.5vw;
-width:95vw; 
+width:95%; 
+left:2.5%;
 }
 }
 `
@@ -26,72 +29,95 @@ width:95vw;
 export const InputField = styled.input`{
 position:relative;
 width:250px;
-left:25%;
+left:10%;
 height: 30px;
-border: 1px solid #cccccc;
 box-sizing: border-box;
 outline: none;
-border-radius:5px;
-margin-bottom: 20px;
-font-size: 16px;
+margin-bottom: 10px;
+border: 2px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+background-color:rgba(255, 255, 255, 0.3);
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+font-size: 20px;
+line-height: 36px;
+display: flex;
+align-items: center;
 
 ${mq[0,1]}{
 
-font-size: 16px;
-width:300px;
+font-size: 20px;
+width:80%;
 height:40px;
-left:28%;
+left:10%;
 }
 }`;
 
 
 export const InputLabel = styled.label`{
 position:relative;
-left:25%;
+left:10%;
 top:20%;
 display: block;
 margin-bottom: 5px;
-font-size: 18px;
 width:300px;
-font-weight:400;
+font-family: 'Open Sans', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 36px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
 
 ${mq[0,1]}{
-  left:28%;
+  left:10%;
 }`;
 
 export const SubmitButton=styled.button`{
-position:absolute;
-width:130px;
-left:25%;
-top:80%;
-height:35px;
-background-color: #0070f3;
-color: #fff;
-border: none;
-border-radius: 5px;
-
-${mq[0,1]}{
-  font-size: 16px;
-  left:33vw;
-  top:85%;
-  }
-}
-`
-export const SubmitLogin=styled.button`{
-  position:absolute;
-  width:130px;
-  left:25%;
-  top:45%;
+  position:relative;
+  width:250px;
+  left:10%;
+  top:60%;
   height:35px;
-  background-color: #0070f3;
+  background-color: #FFFF00;
   color: #fff;
   border: none;
   border-radius: 5px;
+  font-size:24px;
+  font-weight:900;
   
   ${mq[0,1]}{
-    font-size: 16px;
-    left:33vw;
-    top:85%;
+    font-size:26px;
+    left:10%;
+    width:80%;
+    height:40px;
+    top:70%;
+    font-weight:900;
+    }
+}
+`
+export const SubmitLogin=styled.button`{
+  position:relative;
+  width:250px;
+  left:10%;
+  top:70%;
+  height:35px;
+  background-color: #FFFF00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size:24px;
+  font-weight:900;
+  
+  ${mq[0,1]}{
+    font-size:26px;
+    left:10%;
+    width:80%;
+    height:40px;
+    top:70%;
+    font-weight:900;
     }
   }
   ` 
