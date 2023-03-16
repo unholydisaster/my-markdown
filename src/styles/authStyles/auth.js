@@ -18,8 +18,9 @@ box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.3);
 border-radius: 10px;
 
 
-${mq[0,1,2]}{
-top:40%;
+${mq[0,1]}{
+position:relative;
+top:20%;
 width:95%; 
 left:10%;
 }
