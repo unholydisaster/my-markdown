@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const breakpoints=[640,768,1024,1280]
+const breakpoints=[640,768,400,1024,1280]
 export const mq=breakpoints.map(
     bp=>`@media screen and (max-width:${bp}px)`
 )
@@ -18,10 +18,10 @@ box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.3);
 border-radius: 10px;
 
 
-${mq[0,1]}{
-top:20%;
+${mq[0,1,2]}{
+top:40%;
 width:95%; 
-left:2.5%;
+left:10%;
 }
 }
 `
@@ -44,7 +44,7 @@ line-height: 36px;
 display: flex;
 align-items: center;
 
-${mq[0,1]}{
+${mq[0,1,2]}{
 
 font-size: 20px;
 width:80%;
@@ -71,7 +71,7 @@ align-items: center;
 
 color: #FFFFFF;
 
-${mq[0,1]}{
+${mq[0,1,2]}{
   left:10%;
 }`;
 
@@ -88,7 +88,7 @@ export const SubmitButton=styled.button`{
   font-size:24px;
   font-weight:900;
   
-  ${mq[0,1]}{
+  ${mq[0,1,2]}{
     font-size:26px;
     left:10%;
     width:80%;
@@ -111,7 +111,7 @@ export const SubmitLogin=styled.button`{
   font-size:24px;
   font-weight:900;
   
-  ${mq[0,1]}{
+  ${mq[0,1,2]}{
     font-size:26px;
     left:10%;
     width:80%;
