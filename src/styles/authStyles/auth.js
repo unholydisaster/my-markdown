@@ -21,8 +21,8 @@ border-radius: 10px;
 ${mq[0,1]}{
 position:relative;
 top:30vh;
-width:95%; 
-left:10%;
+width:90vw; 
+left:5vw;
 }
 }
 `
