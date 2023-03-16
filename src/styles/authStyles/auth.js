@@ -22,7 +22,7 @@ ${mq[0,1]}{
 position:relative;
 top:30vh;
 width:90vw; 
-left:5vw;
+left:20vw;
 }
 }
 `
