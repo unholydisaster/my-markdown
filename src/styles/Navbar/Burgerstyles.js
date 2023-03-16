@@ -20,7 +20,7 @@ export const Styledburger = styled.div`
 `;
 
 export const Bugers = styled.div`
-  ${mq[1]} {
+  ${mq[1]}
     width: 2rem;
     height: 0.25rem;
     border-radius: 10px;
@@ -42,5 +42,5 @@ export const Bugers = styled.div`
     &:nth-child(3) {
       transform: ${({open}) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
-  }
+  
 `;

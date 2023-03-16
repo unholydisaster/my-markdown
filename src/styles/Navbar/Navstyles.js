@@ -7,19 +7,22 @@ export const mq=breakpoints.map(
     bp=>`@media screen and (max-width:${bp}px)`
 )
 
-export const Navcontainer=styled.div`{
+export const Lq=breakpoints.map(
+    bp=>`@media screen and (min-width:${bp}px)`
+)
+
+export const Navcontainer=styled.div`
 background:black;
 position:relative;
 width:100vw;
 height:50px;
 color:white;
 
-${mq[0,1]}{
+${mq[1]}{
     left:0px;
     background:#0F1F37;
     top:0px;
     width:100vw;
-    height:100vh;
     color:white;
     transform:${({open})=>open? 'translateX(0)':'translateX(-200%)'} ;
     transition-timing-function: ${({open})=>open?"ease-out" :"ease-in"} ;
@@ -27,15 +30,16 @@ ${mq[0,1]}{
     opacity:85%;
     z-index:30; 
 }
+
+${Lq[1]}{
+
 }
 `
 
 
-export const Links=styled.ul`{
+export const Links=styled.ul`
 position:absolute;
 left:10%;
-width:40%;
-top:-10px;
 list-style-type:none;
 display:grid;
 grid-template-columns: repeat(5, 1fr);
@@ -47,12 +51,16 @@ justify-content: center;
 align-items: center;
 list-style-type:none;
 z-index:30;
-width:100%;
+width:100vw;
 grid-template-columns:1fr;
+background:#0F1F37;
 }
+${Lq[1]}{
+width:40%;
+top:-10px;
 }
 `
-export const Linkli=styled.li`{
+export const Linkli=styled.li`
 font-family:Helvetica, verdana, sans-serif;
 font-size:18px;
 
@@ -63,9 +71,8 @@ margin-bottom: 30px;
 font-weight:600;
 z-index:30;
 }
-}
 `
-export const Linka=styled(Link)`{
+export const Linka=styled(Link)`
 text-decoration:none;
 color:white;
 font-weight:500;
@@ -79,18 +86,16 @@ ${mq[0,1]}{
     width:200px;
     z-index:30;
 }
-}
 `
 
-export const Links2=styled.ul`{
+export const Links2=styled.ul`
     position:absolute;
     left:60vw;
     width:30vw;
-    top:-15px;
     list-style-type:none;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    ${mq[0,1]}{
+    ${mq[1]}{
     position:absolute;
     top:10px;
     left:80vw;
@@ -100,9 +105,8 @@ export const Links2=styled.ul`{
     padding:0;
     grid-template-columns: repeat(2, 1fr);
     }
-    }
     `
-    export const Linkto=styled.li`{
+    export const Linkto=styled.li`
         font-family:Helvetica, verdana, sans-serif;
         font-size:22px;
         
@@ -111,10 +115,10 @@ export const Links2=styled.ul`{
         font-size:16px;
         margin-bottom: 22px;
         }
-        }
+        
         `
 
-        export const Button=styled.button`{
+        export const Button=styled.button`
             font-family:Helvetica, verdana, sans-serif;
             font-size:22px;
             width:120px;
@@ -130,9 +134,8 @@ export const Links2=styled.ul`{
             height:35px;
         
             }
-            }
             `
-            export const MButton=styled.button`{
+            export const MButton=styled.button`
                 position:absolute;
                 font-family:Helvetica, verdana, sans-serif;
                 left:85%;
@@ -153,5 +156,7 @@ export const Links2=styled.ul`{
                 left:12%;
                 z-index:20;
                 }
-                }
                 `
+
+
+                
