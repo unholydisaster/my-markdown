@@ -1,8 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import Head from "next/head";
-import { Styledburger, Bugers } from "../styles/Navbar/Burgerstyles";
-import { Button, Linka, Linkli, Links, Links2, Linkto, MButton, Navcontainer} from "../styles/Navbar/Navstyles";
+import { Button,Links2} from "../styles/Navbar/Navstyles";
 import { useCookies } from "react-cookie";
 import { useRouter } from 'next/router';
 
@@ -42,24 +41,6 @@ const Layout=({children})=>{
                       Notes App
                      </title>
                    </Head>
-                   <Styledburger open={open} onClick={openbar}>
-                     <Bugers open={open}  className="path1"/>
-                     <Bugers open={open}  className="path2"/>
-                     <Bugers open={open}  className="path3"/>
-                   </Styledburger>
-                   <Navcontainer open={open}>
-                    <Links>
-                       <Linkli><Linka href="/" passHref>Home</Linka></Linkli>
-                       <Linkli><Linka href="/" passHref>Essays</Linka></Linkli>
-                       <Linkli><Linka href="/" passHref>Projects</Linka></Linkli>
-                       <Linkli><Linka href="/" passHref>Bio</Linka></Linkli>
-                     </Links>
-                     {cookies.access_token ?
-                        (
-                          <MButton onClick={mlogout}>Logout</MButton>
-                        ):(<div></div>)
-                       }
-                   </Navcontainer>
                    <Links2>
                      {!cookies.access_token ? (
                      <>
@@ -76,3 +57,24 @@ const Layout=({children})=>{
 }
 
 export default Layout
+
+/*
+<Styledburger open={open} onClick={openbar}>
+<Bugers open={open}  className="path1"/>
+<Bugers open={open}  className="path2"/>
+<Bugers open={open}  className="path3"/>
+</Styledburger>
+<Navcontainer open={open}>
+<Links>
+  <Linkli><Linka href="/" passHref>Home</Linka></Linkli>
+  <Linkli><Linka href="/" passHref>Essays</Linka></Linkli>
+  <Linkli><Linka href="/" passHref>Projects</Linka></Linkli>
+  <Linkli><Linka href="/" passHref>Bio</Linka></Linkli>
+</Links>
+{cookies.access_token ?
+   (
+     <MButton onClick={mlogout}>Logout</MButton>
+   ):(<div></div>)
+  }
+</Navcontainer>
+*/

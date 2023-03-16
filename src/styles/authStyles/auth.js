@@ -9,7 +9,7 @@ export const Lq=breakpoints.map(
   bp=>`@media screen and (min-width:${bp}px)`
 )
 
-export const  AuthContainer=styled.div`{
+export const  AuthContainer=styled.div`
   position:relative;
   display: flex;
   justify-content: center;
@@ -33,16 +33,23 @@ ${Lq[1]}{
   top:50px;
 }
 
-}
 `
 
 export const Content = styled.div`
   max-height:xxx;
   width: 100%;
 
+  ${mq[1]}{
+    width:100%; 
+  }
+  
+  ${Lq[1]}{
+    width:100%;
+  }
+
 `;
 
-export const InputField = styled.input`{
+export const InputField = styled.input`
 position:relative;
 width:250px;
 left:10%;
@@ -60,13 +67,13 @@ line-height: 36px;
 display: flex;
 align-items: center;
 
-${mq[0,1]}{
+${mq[1]}{
 font-size: 20px;
 width:80%;
 height:40px;
 left:10%;
 }
-}`;
+`;
 
 
 export const InputLabel = styled.label`{
@@ -86,11 +93,11 @@ align-items: center;
 
 color: #FFFFFF;
 
-${mq[0,1,2]}{
+${mq[1]}{
   left:10%;
 }`;
 
-export const SubmitButton=styled.button`{
+export const SubmitButton=styled.button`
   position:relative;
   width:250px;
   left:10%;
@@ -111,10 +118,10 @@ export const SubmitButton=styled.button`{
     top:70%;
     font-weight:900;
     }
-}
+
 `
 
-export const SubmitLogin=styled.button`{
+export const SubmitLogin=styled.button`
   position:relative;
   width:250px;
   left:10%;
@@ -135,7 +142,6 @@ export const SubmitLogin=styled.button`{
     top:70%;
     font-weight:900;
     }
-  }
   ` 
 
 export const StyledHr = styled.hr`
