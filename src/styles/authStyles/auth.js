@@ -24,7 +24,7 @@ ${mq[1]}{
   position:relative;
   width:100vw; 
   top:100px;
-  left:10%;
+  left:20%;
 }
 
 ${Lq[1]}{
