@@ -11,81 +11,77 @@ export const Lq=breakpoints.map(
     bp=>`@media screen and (min-width:${bp}px)`
 )
 
-export const Navcontainer=styled.div`
-background:black;
-position:relative;
-width:100vw;
-height:50px;
-color:white;
-
-${mq[1]}{
-    left:0px;
-    background:#0F1F37;
-    top:0px;
-    width:100vw;
-    color:white;
-    transform:${({open})=>open? 'translateY(0)':'translateY(-100%)'} ;
-    transition-timing-function: ${({open})=>open?"ease-out" :"ease-in"} ;
-    transition: 0.5s;
-    z-index:30; 
-}
-
-${Lq[1]}{
-
-}
-`
-
-
-export const Links=styled.ul`
-position:absolute;
-left:10%;
-list-style-type:none;
-display:grid;
-grid-template-columns: repeat(5, 1fr);
-
-${mq[1]}{
-position:absolute;
-top:100px;
-justify-content: center;
+export const NavbarContainer = styled.nav`
+display: flex;
+justify-content: space-between;
 align-items: center;
-list-style-type:none;
-z-index:30;
-width:100vw;
-grid-template-columns:1fr;
-background:#0F1F37;
-}
+padding: 1rem;
+background-color: #333;
+color: #fff;
+height:50px;
+
 ${Lq[1]}{
-width:40%;
-top:-10px;
+  flex-direction: row;
 }
-`
-export const Linkli=styled.li`
-font-family:Helvetica, verdana, sans-serif;
-font-size:18px;
+${mq[1]}{
+    height:40px;
+    background-color:transparent;
+  }
+  
+`;
 
-${mq[0,1]}{
-font-family:Helvetica, verdana, sans-serif;
-font-size:22px;
-margin-bottom: 30px;
-font-weight:600;
-z-index:30;
-}
-`
-export const Linka=styled(Link)`
-text-decoration:none;
-color:white;
-font-weight:500;
-display:block;
+export const Logo = styled.a`
+font-size: 1.5rem;
+font-weight: bold;
+text-decoration: none;
+color: #fff;
+`;
 
-${mq[0,1]}{
-    text-decoration:none;
-    color:white;
-    font-weight:500;
-    display:block;
-    width:200px;
-    z-index:30;
+
+
+export const StyledBurger = styled.div`
+${mq[1]}{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 15px;
+    right:5%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;  
+    z-index: 40;
 }
-`
+
+${Lq[1]}{
+  display: none;
+}
+`;
+
+export const BurgerLine = styled.div`
+width: 2rem;
+height: 0.25rem;
+border-radius: 10px;
+background-color: ${({open}) => open ? 'white' : 'white'};
+font-size: 16px;
+transform-origin: 1px;
+transition: all 0.3s linear;
+z-index: 20;
+
+&:nth-child(1) {
+  transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+}
+
+&:nth-child(2) {
+  transform: ${({ open }) =>
+    open ? "translateX(-100%)" : "translateX(0)"};
+  opacity: ${({ open }) => (open ? 0 : 1)};
+}
+
+&:nth-child(3) {
+  transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+}
+`;
+
 
 export const Links2=styled.ul`
     position:absolute;
@@ -105,57 +101,58 @@ export const Links2=styled.ul`
     grid-template-columns: repeat(2, 1fr);
     }
     `
-    export const Linkto=styled.li`
-        font-family:Helvetica, verdana, sans-serif;
-        font-size:22px;
-        
-        ${mq[0,1]}{
-        font-family:Helvetica, verdana, sans-serif;
-        font-size:16px;
-        margin-bottom: 22px;
-        }
-        
-        `
 
-        export const Button=styled.button`
-            font-family:Helvetica, verdana, sans-serif;
-            font-size:22px;
-            width:120px;
-            height:35px;
-            background-color:green;
-            border:1px solid green;
-            border-radius:5px;
-            color:white;
-            ${mq[0,1]}{
-            font-family:Helvetica, verdana, sans-serif;
-            font-size:16px;
-            width:90px;
-            height:35px;
-        
-            }
-            `
-            export const MButton=styled.button`
-                position:absolute;
-                font-family:Helvetica, verdana, sans-serif;
-                left:85%;
-                font-size:22px;
-                top:8px;
-                width:120px;
-                height:35px;
-                background-color:green;
-                border:1px solid green;
-                border-radius:5px;
-                color:white;
-                ${mq[0,1]}{
-                font-family:Helvetica, verdana, sans-serif;
-                font-size:16px;
-                width:90px;
-                height:35px;
-                top:85%;
-                left:12%;
-                z-index:20;
-                }
-                `
+export const Button=styled.button`
+font-family:Helvetica, verdana, sans-serif;
+font-size:22px;
+width:120px;
+height:35px;
+background-color:green;
+border:1px solid green;
+border-radius:5px;
+color:white;
+
+${mq[0,1]}{
+font-family:Helvetica, verdana, sans-serif;
+font-size:16px;
+width:90px;
+height:35px;
+}
+`
+
+const LinksWrapper = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    ${mq[1]} {
+      display: ${({open}) => open ? 'flex' : 'none'};
+      flex-flow: column nowrap;
+      background-color: #0d2538;
+      position: fixed;
+      transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+      top: 80px;
+      height: 100vh;
+      width: 100%;
+      gap:20px;
+      padding-top: 3.5rem;
+      transition: transform 0.3s ease-in-out;
+      z-index: 30;
+    }
+  `
+
+export const NavLinks = ({open}) => {
+    return (
+      <LinksWrapper open={open}>
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
+      </LinksWrapper>
+    )
+  }
+  
+
+  
 
 
-                
+
+            
+            

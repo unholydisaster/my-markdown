@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import Head from "next/head";
-import { Button,Links2} from "../styles/Navbar/Navstyles";
+import { BurgerLine, Button,Links2, Logo, NavbarContainer, NavLink, NavLinks, StyledBurger} from "../styles/Navbar/Navstyles";
 import { useCookies } from "react-cookie";
 import { useRouter } from 'next/router';
 
@@ -10,6 +10,10 @@ const Layout=({children})=>{
     const[open, setOpen]=useState(false)
     const [cookies, setCookies]=useCookies(["access_token"])
     const router = useRouter();
+            
+    const handleBurgerClick = () => {
+      setOpen(!open);
+    };
 
     const logout=()=>{
       setCookies("access_token","")
@@ -36,22 +40,22 @@ const Layout=({children})=>{
       }
     return(
         <>
-                   <Head>
-                     <title>
-                      Notes App
-                     </title>
-                   </Head>
-                   <Links2>
-                     {!cookies.access_token ? (
-                     <>
-                      <Button onClick={login}>Login</Button>
-                      <Button onClick={register}>Register</Button>
-                     </>
-                      ): (
-                        <div></div>
-                      )}
-                   </Links2>
-                   {children}
+        <Head>
+          <title>
+          Notes App
+          </title>
+        </Head>
+
+        <NavbarContainer>
+                  <Logo href="/">Logo</Logo>
+                  <StyledBurger onClick={handleBurgerClick}>
+                    <BurgerLine open={open} />
+                    <BurgerLine open={open} />
+                    <BurgerLine open={open} />
+                  </StyledBurger>
+                  <NavLinks open={open}/>
+                </NavbarContainer>
+                {children}
         </>
     )
 }
