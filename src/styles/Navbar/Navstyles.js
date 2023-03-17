@@ -49,7 +49,7 @@ ${mq[1]}{
     justify-content: space-around;
     flex-flow: column nowrap;  
     z-index: 40;
-    border:1px solid white;
+
 }
 
 ${Lq[1]}{
