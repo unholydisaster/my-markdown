@@ -22,9 +22,8 @@ export const  AuthContainer=styled.div`
 
 ${mq[1]}{
   position:relative;
-  width:100vw; 
+  width:100%; 
   top:100px;
-  left:20%;
 }
 
 ${Lq[1]}{
