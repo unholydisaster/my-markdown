@@ -103,7 +103,7 @@ export const SubmitButton=styled.button`
   left:10%;
   top:60%;
   height:35px;
-  background-color: #FFFF00;
+  background-color: green;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -127,7 +127,7 @@ export const SubmitLogin=styled.button`
   left:10%;
   top:70%;
   height:35px;
-  background-color: #FFFF00;
+  background-color: green;
   color: #fff;
   border: none;
   border-radius: 5px;

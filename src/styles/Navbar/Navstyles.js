@@ -15,7 +15,6 @@ export const NavbarContainer = styled.nav`
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 1rem;
 background-color: #333;
 color: #fff;
 height:50px;
@@ -50,6 +49,7 @@ ${mq[1]}{
     justify-content: space-around;
     flex-flow: column nowrap;  
     z-index: 40;
+    border:1px solid white;
 }
 
 ${Lq[1]}{
