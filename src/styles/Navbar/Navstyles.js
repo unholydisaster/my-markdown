@@ -12,21 +12,19 @@ export const Lq=breakpoints.map(
 )
 
 export const NavbarContainer = styled.nav`
-
-position:relative;
+display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: #333;
 color: #fff;
-height:50px;
-width:100vw;
+height:80px;
+width:100%;
 
 ${Lq[1]}{
   flex-direction: row;
 }
 ${mq[1]}{
-    height:40px;
-    
+    height:80px;
     background-color:black;
   }
   

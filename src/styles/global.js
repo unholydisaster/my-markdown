@@ -7,7 +7,7 @@ export const mq=breakpoints.map(
 )
 
 
-export const GlobalStyle=createGlobalStyle`
+export const GlobalStyle=createGlobalStyle`{
   body{
     font-family: Arial, san-serif;
     background-color:#0F1F37;
@@ -15,8 +15,6 @@ export const GlobalStyle=createGlobalStyle`
     margin:0;
     padding:0;
     display:grid;
-  ${mq[1]}{
-    min-height:100vh;
   }
-  }
+}
 `

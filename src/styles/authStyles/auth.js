@@ -18,6 +18,7 @@ export const  AuthContainer=styled.div`
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.3);
   border-radius: 10px;
+  width:100%;
   
 
 ${mq[1]}{
@@ -122,7 +123,6 @@ ${mq[0,1,2]}{
 `
 
 export const SubmitLogin=styled.button`
-  position:relative;
   width:80%;
   left:10%;
   top:60px;
@@ -134,7 +134,8 @@ export const SubmitLogin=styled.button`
   font-size:25px;
   font-weight:900;
   
-  ${mq[0,1,2]}{
+  ${mq[1]}{
+    position:absolute;
     font-size:26px;
     left:10%;
     width:80%;
@@ -182,6 +183,7 @@ export const SubmitLogin=styled.button`
       
       ${mq[1]}{
         left:10%;
+        font-size:18px;
       }`;    
     
 
