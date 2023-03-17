@@ -1,5 +1,5 @@
 import React from "react"
-import Input, { AuthContainer, Content, InputLabel, StyledHr, SubmitButton, SubmitLogin } from "@/styles/authStyles/auth";
+import Input, { AuthContainer, Content, InputLabel, LabelErrors, LabelLogin, StyledHr, SubmitButton, SubmitLogin } from "@/styles/authStyles/auth";
 import { useState } from "react";
 import { useRouter } from 'next/router';
 import {useCookies} from "react-cookie"
@@ -42,10 +42,11 @@ const Login = () => {
     <AuthContainer>
       <Content>
       <form onSubmit={handleLogin}>
-        <InputLabel>Login</InputLabel>
+        <LabelLogin>Login</LabelLogin>
         <StyledHr/>
         <Input label="Email" type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} />
         <Input label="Password" type="password" placeholder="password" value={password} onChange={handlePasswordChange} />
+        <LabelErrors> user with that email does not exist</LabelErrors>
         <SubmitLogin type="submit">Login</SubmitLogin>
       </form>        
       </Content>

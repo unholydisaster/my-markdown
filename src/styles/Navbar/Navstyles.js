@@ -12,19 +12,22 @@ export const Lq=breakpoints.map(
 )
 
 export const NavbarContainer = styled.nav`
-display: flex;
+
+position:relative;
 justify-content: space-between;
 align-items: center;
 background-color: #333;
 color: #fff;
 height:50px;
+width:100vw;
 
 ${Lq[1]}{
   flex-direction: row;
 }
 ${mq[1]}{
     height:40px;
-    background-color:transparent;
+    
+    background-color:black;
   }
   
 `;
@@ -35,7 +38,6 @@ font-weight: bold;
 text-decoration: none;
 color: #fff;
 `;
-
 
 
 export const StyledBurger = styled.div`
@@ -49,7 +51,6 @@ ${mq[1]}{
     justify-content: space-around;
     flex-flow: column nowrap;  
     z-index: 40;
-
 }
 
 ${Lq[1]}{
@@ -84,14 +85,14 @@ z-index: 20;
 
 
 export const Links2=styled.ul`
-    position:absolute;
+    position:relative;
     left:60vw;
     width:30vw;
     list-style-type:none;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     ${mq[1]}{
-    position:absolute;
+    position:relative;
     top:10px;
     left:80vw;
     list-style-type:none;
