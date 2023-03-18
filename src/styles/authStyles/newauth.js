@@ -52,7 +52,7 @@ export const FormButton = styled.button`
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   color: #fff;
   cursor: pointer;
-  font-size:1.4rem;
+  font-size: 1rem;
   font-weight: 700;
   padding: 10px 20px;
   transition: all 0.3s ease-in-out;
