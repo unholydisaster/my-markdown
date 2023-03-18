@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import Head from "next/head";
-import { BurgerLine,Logo, NavLinks, StyledBurger} from "../styles/Navbar/Navstyles";
+import  NavLinks, { BurgerLine,Logo,StyledBurger} from "../styles/Navbar/Navstyles";
 import { useCookies } from "react-cookie";
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
@@ -67,7 +67,7 @@ const Layout=({children})=>{
         </Container>
         </Navbar>
         <Logo href="/">Logo</Logo>
-        <NavLinks open={open}/>
+        <NavLinks/>
         {children}
         </>
     )
