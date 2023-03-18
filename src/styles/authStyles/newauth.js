@@ -9,8 +9,6 @@ export const FormContainer = styled.div`
 
 export const FormWrapper = styled.div`
   display: flex;
-  position:relative;
-  top:20%;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
