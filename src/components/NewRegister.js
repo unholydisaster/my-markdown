@@ -5,7 +5,7 @@ import {
   FormTitle,
   FormInput,
   FormButton,
-} from '../styles/RegisterForm';
+} from '../styles/authStyles/newauth';
 
 const Register = () => {
   return (
