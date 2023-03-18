@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
-position: absolute;
-top: 70px;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 100vh;
+height: calc(100vh - 70px); /* subtract 70px from 100vh */
+margin-top: 70px; /* add 70px margin on top */
 `;
 
 export const FormWrapper = styled.div`
