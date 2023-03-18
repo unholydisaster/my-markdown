@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-height: calc(100vh - 70px); /* subtract 70px from 100vh */
-margin-top: 70px; /* add 70px margin on top */
+  position: absolute;
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 `;
 
 export const FormWrapper = styled.div`
@@ -19,6 +20,8 @@ export const FormWrapper = styled.div`
   width: 35vw;
   max-width: 400px;
   @media screen and (max-width: 768px) {
+    position:absolute;
+    left:5vw;
     width: 90vw;
     padding: 20px;
   }
