@@ -6,6 +6,7 @@ const SidebarContainer = styled.div`
     height:100vh;
     position:relative;
     left: 0;
+    z-index: 999;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
