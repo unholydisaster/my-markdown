@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 const SidebarContainer = styled.div`
 @media (max-width: 768px) {
-    width: 90vw;
+    width:100vw;
     height:100vh;
     position:relative;
-    top:70px;
     left: 0;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
