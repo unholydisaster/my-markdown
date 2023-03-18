@@ -4,6 +4,8 @@ import Head from "next/head";
 import { BurgerLine,Logo, NavLinks, StyledBurger} from "../styles/Navbar/Navstyles";
 import { useCookies } from "react-cookie";
 import { useRouter } from 'next/router';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 const Layout=({children})=>{
@@ -73,23 +75,3 @@ const Layout=({children})=>{
 
 export default Layout
 
-/*
-<Styledburger open={open} onClick={openbar}>
-<Bugers open={open}  className="path1"/>
-<Bugers open={open}  className="path2"/>
-<Bugers open={open}  className="path3"/>
-</Styledburger>
-<Navcontainer open={open}>
-<Links>
-  <Linkli><Linka href="/" passHref>Home</Linka></Linkli>
-  <Linkli><Linka href="/" passHref>Essays</Linka></Linkli>
-  <Linkli><Linka href="/" passHref>Projects</Linka></Linkli>
-  <Linkli><Linka href="/" passHref>Bio</Linka></Linkli>
-</Links>
-{cookies.access_token ?
-   (
-     <MButton onClick={mlogout}>Logout</MButton>
-   ):(<div></div>)
-  }
-</Navcontainer>
-*/
