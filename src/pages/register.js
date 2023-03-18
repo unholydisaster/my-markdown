@@ -1,12 +1,13 @@
-import RegistrationForm from "@/components/Registration"
+import Register from "@/components/NewRegister"
 
 
-const RegisterForm=()=> {
+
+const RegisterForm1=()=> {
   return (
     <>
-    <RegistrationForm/>
+    <Register/>
     </>
   )
 }
 
-export default RegisterForm
+export default RegisterForm1

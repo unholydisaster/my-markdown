@@ -1,17 +1,18 @@
 import React from "react"
 import { useState } from "react"
 import Head from "next/head";
-import  NavLinks, { BurgerLine,Logo,StyledBurger} from "../styles/Navbar/Navstyles";
+import { BurgerLine,Logo,StyledBurger} from "../styles/Navbar/Navstyles";
 import { useCookies } from "react-cookie";
 import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import Sidebar from "@/styles/Navbar/Sidebar";
 
 
 const Layout=({children})=>{
 
     const[open, setOpen]=useState(false)
-    const [cookies, setCookies]=useCookies(["access_token"])
+    const[cookies, setCookies]=useCookies(["access_token"])
     const router = useRouter();
             
     const handleBurgerClick = () => {
@@ -50,14 +51,8 @@ const Layout=({children})=>{
         </Head>
         <Navbar bg="dark">
         <Container>
-          <Navbar.Brand href="#home">
-            <img
-              src=""
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
+          <Navbar.Brand href="/">
+          <Logo href="/">Logo</Logo>
           </Navbar.Brand>
           <StyledBurger onClick={handleBurgerClick}>
           <BurgerLine open={open} />
@@ -66,8 +61,7 @@ const Layout=({children})=>{
           </StyledBurger>
         </Container>
         </Navbar>
-        <Logo href="/">Logo</Logo>
-        <NavLinks/>
+        <Sidebar open={open}/>
         {children}
         </>
     )

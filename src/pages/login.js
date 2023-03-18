@@ -1,9 +1,12 @@
-import Login from "../components/Login"
+import Login from "@/components/NewLogin"
 
-const Loginpage=()=>{
-    return(
-        <Login/>
-    )
+
+const LoginForm=()=> {
+  return (
+    <>
+    <Login/>
+    </>
+  )
 }
 
-export default Loginpage
+export default LoginForm
