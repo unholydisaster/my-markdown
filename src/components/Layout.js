@@ -1,9 +1,10 @@
 import React from "react"
 import { useState } from "react"
 import Head from "next/head";
-import { BurgerLine, Button,Links2, Logo, NavbarContainer, NavLink, NavLinks, StyledBurger} from "../styles/Navbar/Navstyles";
+import { BurgerLine,Logo, NavLinks, StyledBurger} from "../styles/Navbar/Navstyles";
 import { useCookies } from "react-cookie";
 import { useRouter } from 'next/router';
+
 
 const Layout=({children})=>{
 
@@ -45,17 +46,27 @@ const Layout=({children})=>{
           Notes App
           </title>
         </Head>
-
-        <NavbarContainer>
-                  <Logo href="/">Logo</Logo>
-                  <StyledBurger onClick={handleBurgerClick}>
-                    <BurgerLine open={open} />
-                    <BurgerLine open={open} />
-                    <BurgerLine open={open} />
-                  </StyledBurger>
-                  <NavLinks open={open}/>
-                </NavbarContainer>
-                {children}
+        <Navbar bg="dark">
+        <Container>
+          <Navbar.Brand href="#home">
+            <img
+              src=""
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
+          <StyledBurger onClick={handleBurgerClick}>
+          <BurgerLine open={open} />
+          <BurgerLine open={open} />
+          <BurgerLine open={open} />
+          </StyledBurger>
+        </Container>
+        </Navbar>
+        <Logo href="/">Logo</Logo>
+        <NavLinks open={open}/>
+        {children}
         </>
     )
 }

@@ -42,7 +42,6 @@ export const StyledBurger = styled.div`
 ${mq[1]}{
     width: 2rem;
     height: 2rem;
-    position: absolute;
     top: 15px;
     right:5%;
     display: flex;

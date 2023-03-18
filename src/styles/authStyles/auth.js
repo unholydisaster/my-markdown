@@ -78,7 +78,7 @@ left:10%;
 `;
 
 
-export const InputLabel = styled.label`{
+export const InputLabel = styled.label`
 position:relative;
 left:10%;
 top:20%;
@@ -97,7 +97,8 @@ color: #FFFFFF;
 
 ${mq[1]}{
   left:10%;
-}`;
+}
+`;
 
 export const SubmitButton=styled.button`
 position:relative;
@@ -145,7 +146,7 @@ export const SubmitLogin=styled.button`
     }
   ` 
 
-  export const LabelLogin = styled.label`{
+  export const LabelLogin = styled.label`
     position:relative;
     left:10%;
     top:10px;
@@ -163,9 +164,11 @@ export const SubmitLogin=styled.button`
     
     ${mq[1]}{
       left:10%;
-    }`;
+    }
+    `
+    ;
 
-    export const LabelErrors = styled.label`{
+    export const LabelErrors = styled.label`
       position:relative;
       left:10%;
       top:20px;
