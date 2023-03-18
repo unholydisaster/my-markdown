@@ -168,7 +168,6 @@ export const SubmitLogin=styled.button`
     export const LabelErrors = styled.label`
       position:relative;
       left:10%;
-      top:20px;
       display: block;
       width:80%;
       margin-bottom: 5px;
