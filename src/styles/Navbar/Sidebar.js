@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 
 const SidebarContainer = styled.div`
-    display: flex;
-    flex-flow: row nowrap;
-
-  @media (max-width: 768px) {
-    display: ${({open}) => open ? 'flex' : 'none'};
-    flex-flow: column nowrap;
+@media (max-width: 768px) {
     width: 90vw;
     height:100vh;
-    position: fixed;
+    position:relative;
     top:70px;
     left: 0;
     background-color: #fff;
@@ -21,7 +16,7 @@ const SidebarContainer = styled.div`
 
 const Sidebar = ({ open }) => {
   return (
-    <SidebarContainer isOpen={open}>
+    <SidebarContainer open={open}>
       <h2>Sidebar</h2>
       <p>Some content goes here.</p>
     </SidebarContainer>
