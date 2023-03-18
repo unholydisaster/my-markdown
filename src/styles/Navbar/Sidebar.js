@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const SidebarContainer = styled.div`
    display:none;
-   
+
   @media (max-width: 768px) {
     width: 90vw;
     height:100vh;
@@ -17,9 +17,9 @@ const SidebarContainer = styled.div`
   }
 `;
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ open }) => {
   return (
-    <SidebarContainer isOpen={isOpen}>
+    <SidebarContainer isOpen={open}>
       <h2>Sidebar</h2>
       <p>Some content goes here.</p>
     </SidebarContainer>

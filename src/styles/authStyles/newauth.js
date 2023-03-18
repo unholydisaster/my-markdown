@@ -5,12 +5,12 @@ export const FormContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position:relative;
-  top:20%;
 `;
 
 export const FormWrapper = styled.div`
   display: flex;
+  position:relative;
+  top:20%;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
