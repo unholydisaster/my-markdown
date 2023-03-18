@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
 const SidebarContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 999;
-  width: 300px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-  transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(-100%)'};
-
+   display:none;
+   
   @media (max-width: 768px) {
     width: 90vw;
+    height:100vh;
+    position: fixed;
+    top:70px;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   }
 `;
 
