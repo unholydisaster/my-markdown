@@ -137,7 +137,7 @@ const LinksWrapper = styled.div`
     }
   `
 
-export const NavLinks = ({open}) => {
+const NavLinks = ({open}) => {
     return (
       <LinksWrapper open={open}>
         <Link href="/">Home</Link>
@@ -146,6 +146,8 @@ export const NavLinks = ({open}) => {
       </LinksWrapper>
     )
   }
+
+export default NavLinks
   
 
   

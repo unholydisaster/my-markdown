@@ -118,7 +118,6 @@ ${mq[0,1,2]}{
   left:10%;
   width:80%;
   height:40px;
-  top:70px;
   font-weight:900;
   }
 `
@@ -136,12 +135,10 @@ export const SubmitLogin=styled.button`
   font-weight:900;
   
   ${mq[1]}{
-    position:absolute;
     font-size:26px;
     left:10%;
     width:80%;
     height:40px;
-    top:70%;
     font-weight:900;
     }
   ` 

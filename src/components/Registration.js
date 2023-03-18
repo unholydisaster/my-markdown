@@ -63,8 +63,8 @@ async function handleSubmit(event){
       <Input label="Username" type="text" placeholder="Enter your Username" value={username} onChange={handleNameChange} />
       <Input label="Email" type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} />
       <Input label="Password" type="password" placeholder="password" value={password} onChange={handlePasswordChange} />
-      <LabelErrors> user with that email does not exist</LabelErrors>
       <SubmitButton type="submit">Register</SubmitButton>
+      <LabelErrors> user with that email does not exist</LabelErrors>
     </form>
     </Content>
     </AuthContainer>
