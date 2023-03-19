@@ -1,11 +1,12 @@
 import React from 'react';
+
 import {
   FormContainer,
   FormWrapper,
   FormTitle,
   FormInput,
   FormButton,
-} from '../styles/authStyles/newauth';
+} from '../styles/signin_signup/signup';
 
 import { useState } from "react";
 import { useRouter } from 'next/router';

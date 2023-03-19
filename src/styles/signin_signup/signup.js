@@ -1,12 +1,26 @@
 import styled from 'styled-components';
 
+
+const breakpoints=[640,768,1024,1280]
+
+export const mq=breakpoints.map(
+    bp=>`@media screen and (max-width:${bp}px)`
+)
+
+export const lq=breakpoints.map(
+    bp=>`@media screen and (min-width:${bp}px)`
+)
+
 export const FormContainer = styled.div`
-  position: absolute;
-  top: 40px;
+  position:relative;
+  top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+
+
 `;
 
 export const FormWrapper = styled.div`
@@ -17,20 +31,33 @@ export const FormWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   padding: 30px;
-  width: 35vw;
   max-width: 400px;
-  @media screen and (max-width: 768px) {
+
+  ${mq[1]}{
     position:absolute;
-    left:5vw;
-    width: 90vw;
+    left:2.5vw;
     padding: 20px;
+    top:90px;
+    width:90vw;
+  }
+  ${lq[1]}{
+    width:25vw;
+    height:60%;
   }
 `;
 
 export const FormTitle = styled.h2`
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  ${lq[1]}{
+    margin-bottom: 20px;
+    margin-top:0px;
+  }
+  ${mq[1]}{
+    margin-bottom: 20px;
+    margin-top:0px;
+  }
 `;
 
 export const FormInput = styled.input`
@@ -43,6 +70,14 @@ export const FormInput = styled.input`
   padding: 10px;
   margin-bottom: 20px;
   width: 100%;
+  ${lq[1]}{
+    width:90%;
+  }
+  ${mq[1]}{
+    width:90%;
+    position:relative;
+    left:5px;
+  }
 `;
 
 export const FormButton = styled.button`
@@ -54,10 +89,23 @@ export const FormButton = styled.button`
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
-  padding: 10px 20px;
   transition: all 0.3s ease-in-out;
   width: 100%;
   &:hover {
     background-color: #3c3cff;
+  }
+  ${lq[1]}{
+    width:90%;
+    padding:10px;
+    position:relative;
+    left:10px;
+
+  }
+  ${mq[1]}{
+    width:95%;
+    padding:10px;
+    position:relative;
+    left:10px;
+
   }
 `;

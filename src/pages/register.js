@@ -1,5 +1,4 @@
-import Register from "@/components/NewRegister"
-
+import Register from "@/components/registerform"
 
 
 const RegisterForm1=()=> {

@@ -5,7 +5,7 @@ import {
   FormTitle,
   FormInput,
   FormButton,
-} from '../styles/authStyles/newauth';
+} from '../styles/signin_signup/signup';
 
 import { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -45,6 +45,7 @@ const Register = () => {
           },
           method: "POST"
         }).then((res)=>res.json())
+        
           router.push('/login'); // Navigate to login page
     };
   

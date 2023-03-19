@@ -1,4 +1,4 @@
-import Login from "@/components/NewLogin"
+import Login from "@/components/loginform"
 
 
 const LoginForm=()=> {
