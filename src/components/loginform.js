@@ -31,7 +31,8 @@ const Login = () => {
       event.preventDefault();
   
       try{
-        const response = await axios.put("/api/auth",
+        const BASE_URL = process.env.BASE_URL;
+        const response = await axios.put(`${BASE_URL}/api/auth`,
         {
           email, 
           password
