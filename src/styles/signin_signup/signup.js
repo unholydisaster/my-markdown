@@ -35,14 +35,14 @@ export const FormWrapper = styled.div`
 
   ${mq[1]}{
     position:absolute;
-    left:2.5vw;
+    left:5vw;
     padding: 20px;
     top:90px;
     width:90vw;
   }
   ${lq[1]}{
     width:25vw;
-    height:60%;
+    height:xxxpx;
   }
 `;
 
@@ -71,12 +71,12 @@ export const FormInput = styled.input`
   margin-bottom: 20px;
   width: 100%;
   ${lq[1]}{
-    width:90%;
+    width:100%;
   }
   ${mq[1]}{
-    width:90%;
+    width:100%;
     position:relative;
-    left:5px;
+    
   }
 `;
 
@@ -90,22 +90,21 @@ export const FormButton = styled.button`
   font-size: 1rem;
   font-weight: 700;
   transition: all 0.3s ease-in-out;
-  width: 100%;
   &:hover {
     background-color: #3c3cff;
   }
   ${lq[1]}{
-    width:90%;
+    width:100%;
     padding:10px;
     position:relative;
-    left:10px;
+    
 
   }
   ${mq[1]}{
-    width:95%;
+    width:100%;
     padding:10px;
     position:relative;
-    left:10px;
+  
 
   }
 `;
