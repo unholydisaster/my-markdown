@@ -4,7 +4,7 @@ import { UserModel } from "@/backEnd/models/users";
 import jwt from "jsonwebtoken"
 import dbConnect from "@/backEnd/utils/dbConnect";
 
-dbConnect
+dbConnect();
 
 export default async (req, res) => {
   const { method } = req;
