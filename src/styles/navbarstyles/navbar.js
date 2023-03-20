@@ -10,7 +10,7 @@ export const Navbar = styled.nav`
   align-items: center;
   padding: 10px;
   width:100vw;
-  height:40px;
+  height:70px;
   
 
   ${mq[1]}{
@@ -106,4 +106,5 @@ z-index: 20;
   transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
 }
 `;
+
 
