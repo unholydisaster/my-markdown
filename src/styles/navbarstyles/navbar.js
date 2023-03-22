@@ -5,7 +5,7 @@ import { lq, mq } from '../signin_signup/signup';
 
 export const Navbar = styled.nav`
   background-color: #333;
-  display: flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -16,6 +16,7 @@ export const Navbar = styled.nav`
   ${mq[1]}{
     width:100vw;
     height:50px;
+    z-index:999;
     
   }
   
@@ -38,18 +39,18 @@ export const NavLinks = styled.ul`
   list-style: none;
 
  ${mq[1]}{
-        transition: transform 0.3s ease-in-out;
-        transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+        transition: transform 1.0s ease-out-in;
+        transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-150%)'};
         flex-direction: column;
         align-items: center;
         position:absolute;
         left:0;
         top:46px;
         width: 100%;
-        height:100%;
+        height:100px;
         background-color: #333;
         padding: 10px;
-        z-index:999;
+       
         
       }
   }
@@ -59,7 +60,25 @@ export const NavItem = styled.li`
   margin-left: 10px;
 
   ${mq[1]}{
-    margin: 10px 0;
+    position:relative;
+    border: 1px solid black;
+    display:flex;
+    border-radius:10px;
+    justify-content: center;
+    align-items: center;    
+    width:120px;
+    height:35px;
+    top:10px;
+  }
+`;
+
+export const Links = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  ${mq[1]}{
+    font-size:24px;
+    style:none;
   }
 `;
 
@@ -107,4 +126,22 @@ z-index: 20;
 }
 `;
 
+export const LinkContainer = styled.div`
+${mq[1]}{
+  height: 100px;
+  width:100vw;
+}
+`;
+
+export const ItemContainer = styled.div`
+${mq[1]}{
+  position:relative;
+  display:grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
+  height: 100px;
+  width:90vw;
+  left:5%;
+}  
+`;
 

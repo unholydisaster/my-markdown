@@ -1,5 +1,4 @@
-import { BurgerLine, Logo, Navbar, NavItem, NavLinks, StyledBurger } from '@/styles/navbarstyles/navbar';
-import Link from 'next/link';
+import { BurgerLine, ItemContainer, LinkContainer, Links, Logo, Navbar, NavItem, NavLinks, StyledBurger } from '@/styles/navbarstyles/navbar';
 import React, { useState } from 'react';
 
 
@@ -14,18 +13,22 @@ const NavbarComponent = () => {
       <Navbar>
         <Logo href="/">Logo</Logo>
         <NavLinks open={open}>
+          <LinkContainer>
+          <ItemContainer>
           <NavItem>
-            <Link href="/">About</Link>
+            <Links href="/">About</Links>
           </NavItem>
           <NavItem>
-            <Link href="/">Services</Link>
+            <Links href="/">Services</Links>
           </NavItem>
           <NavItem>
-            <Link href="/login">Sing In</Link>
+            <Links href="/login">Sing In</Links>
           </NavItem>
           <NavItem>
-            <Link href="/register">Sign Up</Link>
+            <Links href="/register">Sign Up</Links>
           </NavItem>
+          </ItemContainer>
+          </LinkContainer>
         </NavLinks>
         <StyledBurger onClick={handleBurgerClick}>
           <BurgerLine open={open} />

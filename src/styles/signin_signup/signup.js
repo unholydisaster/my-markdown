@@ -1,15 +1,5 @@
 import styled from 'styled-components';
-
-
-const breakpoints=[640,768,1024,1280]
-
-export const mq=breakpoints.map(
-    bp=>`@media screen and (max-width:${bp}px)`
-)
-
-export const lq=breakpoints.map(
-    bp=>`@media screen and (min-width:${bp}px)`
-)
+import {lq,mq} from "../signin_signup/signup"
 
 export const FormContainer = styled.div`
   position:relative;
@@ -18,9 +8,6 @@ export const FormContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-
-
-
 `;
 
 export const FormWrapper = styled.div`
@@ -97,14 +84,10 @@ export const FormButton = styled.button`
     width:100%;
     padding:10px;
     position:relative;
-    
-
   }
   ${mq[1]}{
     width:100%;
     padding:10px;
     position:relative;
-  
-
   }
 `;
