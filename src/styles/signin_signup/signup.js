@@ -1,5 +1,14 @@
 import styled from 'styled-components';
-import {lq,mq} from "../signin_signup/signup"
+
+const breakpoints=[640,768,1024,1280]
+
+export const mq=breakpoints.map(
+    bp=>`@media screen and (max-width:${bp}px)`
+)
+
+export const lq=breakpoints.map(
+    bp=>`@media screen and (min-width:${bp}px)`
+)
 
 export const FormContainer = styled.div`
   position:relative;
