@@ -1,20 +1,18 @@
 import { HomeContainer, HomeWrapper, Paragraph } from "@/styles/homepage/homepage";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import fetch from "isomorphic-unfetch";
 
 
 const  HomePage=({notedata})=>{
-  const [note,setNotes]=useState([])
-  useEffect(() => setNotes(notedata), [])
 
   return (<div>
   
    <HomeContainer>
     <HomeWrapper>
-    {note.map((items)=>{
+    {notedata.map((items)=>{
       return(
         <ul>
-        <li key={items.id}>
+        <li key={items._id}>
           <Paragraph>{items.title}</Paragraph>
         </li>
         </ul>
