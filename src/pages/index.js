@@ -11,8 +11,8 @@ const  HomePage=({notedata})=>{
     <HomeWrapper>
     {notedata.map((items)=>{
       return(
-        <ul>
-        <li key={items.id}>
+        <ul key={items.id}>
+        <li>
           <Paragraph>{items.title}</Paragraph>
         </li>
         </ul>
