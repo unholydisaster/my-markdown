@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
-import { UserModel } from "@/backend/models/users";
+import { UserModel } from "../../../backend/models/users";
 import jwt from "jsonwebtoken"
-import dbConnect from "@/backend/utils/dbConnect";
+import dbConnect from "../../../backend/utils/dbConnect";
 
 dbConnect()
 
