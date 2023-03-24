@@ -1,6 +1,5 @@
-import Layout from '@/components/Layout'
+import Layout from '@/layout/layoutComponent'
 import { GlobalStyle } from '@/styles/global'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App({ Component, pageProps }) {
   return <>
