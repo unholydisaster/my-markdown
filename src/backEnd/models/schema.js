@@ -1,6 +1,10 @@
 import mongoose from "mongoose"
 
-// Personal Info schema
+let UserNotes;
+try{
+  UserNotes=mongoose.model("usernotes")
+}catch{
+  // Personal Info schema
 const noteSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -16,5 +20,8 @@ const noteSchema = new mongoose.Schema({
   }
 });
 
+UserNotes=mongoose.model("usernotes", noteSchema);
+}
 
-export const UserNotes=mongoose.model("usernotes", noteSchema);
+export {UserNotes}
+

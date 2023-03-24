@@ -37,8 +37,8 @@ const Register = () => {
   async function handleSubmit(event){
       event.preventDefault();
       // Make sure the password and confirm password match
-      const BASE_URL = process.env.BASE_URL;
-        const result = await fetch(`${BASE_URL}/api/auth`,{
+        const BASE_URL = process.env.BASE_URL;
+        const result = await fetch(`${BASE_URL}api/auth`,{
           body: JSON.stringify({username,email,password}),
           headers: {
             "Content-Type": "application/json",

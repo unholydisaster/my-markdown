@@ -4,18 +4,18 @@ import { lq, mq } from '../signin_signup/signup';
 
 
 export const Navbar = styled.nav`
-  background-color: #333;
+  background: linear-gradient(180deg, rgba(43,58,135,1) 61%, rgba(51,125,140,1) 100%);
   display:flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
   width:100vw;
-  height:70px;
+  height:50px;
   
-
   ${mq[1]}{
+    background: linear-gradient(180deg, rgba(43,58,135,1) 61%, rgba(51,125,140,1) 100%);
     width:100vw;
-    height:50px;
+    padding:20px;
+    height:20px;
     z-index:999;
     
   }
@@ -23,13 +23,16 @@ export const Navbar = styled.nav`
 `;
 
 export const Logo = styled(Link)`
+  text-decoration: none;
   color: white;
   font-size: 1.5rem;
+  position:absolute;
+  left:0;
   ${mq[1]}{
-    position:relative;
-    left:20%;
-    font-size:24px;
-    top:10px;
+    position:absolute;
+    left:0;
+    top:15px;
+    font-size:26px;
     style:none;
   }
 `;
@@ -37,20 +40,21 @@ export const Logo = styled(Link)`
 export const NavLinks = styled.ul`
   display: flex;
   list-style: none;
+  position:absolute;
+  left:25%;
+  width:40%;
 
  ${mq[1]}{
         transition: transform 1.0s ease-out-in;
-        transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-150%)'};
+        transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-160%)'};
         flex-direction: column;
         align-items: center;
         position:absolute;
         left:0;
-        top:46px;
+        top:42px;
         width: 100%;
         height:100px;
-        background-color: #333;
-        padding: 10px;
-       
+        background: linear-gradient(360deg, rgba(43,58,135,1) 61%, rgba(51,125,140,1) 100%);
         
       }
   }
@@ -61,7 +65,6 @@ export const NavItem = styled.li`
 
   ${mq[1]}{
     position:relative;
-    border: 1px solid black;
     display:flex;
     border-radius:10px;
     justify-content: center;
@@ -72,13 +75,16 @@ export const NavItem = styled.li`
   }
 `;
 
-export const Links = styled(Link)`
-  text-decoration: none;
+export const Links = styled.button`
   color: white;
   font-size: 24px;
   ${mq[1]}{
     font-size:24px;
-    style:none;
+    width:100%;
+    heigth:100%;
+    border: 1px solid rgb(41,151,78);
+    background-color: inherit;
+
   }
 `;
 
@@ -89,7 +95,7 @@ ${mq[1]}{
     height: 1.8rem;
     position:absolute;
     top: 15px;
-    left:10px;
+    left:20%;
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;  
@@ -128,20 +134,77 @@ z-index: 20;
 
 export const LinkContainer = styled.div`
 ${mq[1]}{
-  height: 100px;
+  height: 160px;
   width:100vw;
 }
 `;
 
 export const ItemContainer = styled.div`
+position:relative;
+display:grid;
+grid-template-columns: repeat(4, 1fr);
 ${mq[1]}{
   position:relative;
   display:grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   height: 100px;
   width:90vw;
   left:5%;
 }  
 `;
 
+
+
+export const AuthContainers = styled.div`
+position:absolute;
+right:2%;
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+width:55vw; 
+justify-content: center;
+grid-gap:10px;
+align-items: center;  
+`;
+
+export const AuthButtons = styled.button`
+  ${mq[1]}{
+    background:white;
+    border: 1px solid rgb(41,151,78);
+    border-radius:5px;  
+    width:70px;
+    height:35px;
+    text-align:center;
+    top:10px;
+    font-size:16px;
+    font-weight:700;
+  }
+`;
+
+export const LogoutButton = styled.button`
+  ${mq[1]}{
+    background:white;
+    border: 1px solid rgb(41,151,78);
+    border-radius:5px;  
+    width:70px;
+    height:35px;
+    text-align:center;
+    position:absolute;
+    left:80%;
+    top:0px;
+    font-size:16px;
+    font-weight:700;
+  }
+`;
+
+export const SearchArea = styled.input`
+  ${mq[1]}{
+    border: 1px solid rgb(41,151,78);
+    border-radius:5px;  
+    width:120px;
+    height:30px;
+    text-align:center;
+    top:10px;
+    font-size:16px;
+    font-weight:700;
+  }
+`;

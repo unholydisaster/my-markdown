@@ -1,9 +1,9 @@
 import React from "react"
 import Head from "next/head";
-import NavbarComponent from "./navbar";
+import NavbarComponent from "@/components/navbar";
 
 const Layout=({children})=>{
-  
+      
     return(
         <>
         <Head>

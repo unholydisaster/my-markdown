@@ -1,5 +1,5 @@
-import { UserNotes } from "@/backEnd/models/schema";
-import { UserModel } from "@/backEnd/models/users";
+import { UserNotes } from "@/backend/models/schema";
+import { UserModel } from "@/backend/models/users";
 import dbConnect from "@/backEnd/utils/dbConnect";
 
 
@@ -22,15 +22,6 @@ export default async(req, res)=> {
 
     case "POST":
       try {
-      //we have two ways of doing this
-      //below is the first method
-       /*const data=new userNotes(req.body)
-         const response=await data.save()
-         res.status(response)
-       */
-      //below is the second method
-      //9560
-      //9789
         const notes = new UserNotes(req.body);
         await notes.save()
         res.json(notes);

@@ -37,6 +37,7 @@ const Login = () => {
           email, 
           password
         })
+        alert("Successfully logedin")
         console.log(response)
         setCookies("access_token", response.data.token)
         window.localStorage.setItem("userID", response.data.UserID)
