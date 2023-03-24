@@ -12,7 +12,7 @@ const  HomePage=({notedata})=>{
     {notedata.map((items)=>{
       return(
         <ul>
-        <li key={items._id}>
+        <li key={items.id}>
           <Paragraph>{items.title}</Paragraph>
         </li>
         </ul>
